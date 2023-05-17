@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Nimesh_Portfolio/static/css/main.ce3d0ba1.css",
-    "main.js": "/Nimesh_Portfolio/static/js/main.dc304634.js",
+    "main.js": "/Nimesh_Portfolio/static/js/main.a6c6c8e2.js",
     "static/js/787.60a6ea97.chunk.js": "/Nimesh_Portfolio/static/js/787.60a6ea97.chunk.js",
     "static/media/four.svg": "/Nimesh_Portfolio/static/media/four.797cac62273af3693cd624c5f58e33b5.svg",
     "static/media/three.svg": "/Nimesh_Portfolio/static/media/three.d4f751d1b799f45195a256c314211dfe.svg",
@@ -144,11 +144,11 @@
     "static/media/vuetifyjs.svg": "/Nimesh_Portfolio/static/media/vuetifyjs.8a22a3ec81ad62e97094feab6e7ee0fb.svg",
     "static/media/bulma.svg": "/Nimesh_Portfolio/static/media/bulma.5910d4416e077262d0264109649ab214.svg",
     "main.ce3d0ba1.css.map": "/Nimesh_Portfolio/static/css/main.ce3d0ba1.css.map",
-    "main.dc304634.js.map": "/Nimesh_Portfolio/static/js/main.dc304634.js.map",
+    "main.a6c6c8e2.js.map": "/Nimesh_Portfolio/static/js/main.a6c6c8e2.js.map",
     "787.60a6ea97.chunk.js.map": "/Nimesh_Portfolio/static/js/787.60a6ea97.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ce3d0ba1.css",
-    "static/js/main.dc304634.js"
+    "static/js/main.a6c6c8e2.js"
   ]
 }
