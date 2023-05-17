@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="app">
-      <Router>
+      <Router basename="/Nimesh_Portfolio/">
         <ScrollToTop />
         <Switch>
           <Route path="/" exact component={Main} />
