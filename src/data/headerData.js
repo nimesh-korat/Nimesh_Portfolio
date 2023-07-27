@@ -1,4 +1,3 @@
-import resume from '../assets/pdf/resume.pdf'
 
 export const headerData = {
     name: 'Nimesh Korat',
