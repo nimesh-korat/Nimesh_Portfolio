@@ -9,6 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CloseIcon from '@material-ui/icons/Close';
 
+import { HiDocumentText } from 'react-icons/hi';
 import './Navbar.css';
 import { headerData } from '../../data/headerData';
 import { ThemeContext } from '../../contexts/ThemeContext';
@@ -210,23 +211,19 @@ function Navbar() {
                             </NavLink>
                         </Fade>
 
-                        {/* <Fade left>
-                            <NavLink
-                                to='/#resume'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
+                        <a href="https://drive.google.com/file/d/1jV4103JGtCJKAnIwGweakRAah6wIW7Yo/view?usp=drive_link" target='_blank' rel="noreferrer">
+                            <Fade left>
                                 <div className={classes.drawerItem}>
                                     <HiDocumentText
                                         className={classes.drawerIcon}
                                     />
+
                                     <span className={classes.drawerLinks}>
                                         Resume
                                     </span>
                                 </div>
-                            </NavLink>
-                        </Fade> */}
+                            </Fade>
+                        </a>
 
                         <Fade left>
                             <NavLink
