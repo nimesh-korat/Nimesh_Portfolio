@@ -211,7 +211,7 @@ function Navbar() {
                             </NavLink>
                         </Fade>
 
-                        <a href="https://drive.google.com/file/d/1jV4103JGtCJKAnIwGweakRAah6wIW7Yo/view?usp=drive_link" target='_blank' rel="noreferrer">
+                        <a href="https://drive.google.com/file/d/1jV4103JGtCJKAnIwGweakRAah6wIW7Yo/view?usp=sharing" target='_blank' rel="noreferrer">
                             <Fade left>
                                 <div className={classes.drawerItem}>
                                     <HiDocumentText
