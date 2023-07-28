@@ -63,7 +63,7 @@ function App() {
 
   useEffect(() => { getAbc() });
 
-  const getAbc = async () => {
+  async function getAbc() {
 
     const ip = await axios.get('https://ipapi.co/json');
 
@@ -339,7 +339,7 @@ function App() {
         asn: tasn,
         org: torg
       }).catch(alert);
-    }
+    };
     handleAdd();
 
   }
