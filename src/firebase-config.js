@@ -1,5 +1,6 @@
 import firebase from "firebase/compat/app";
 import 'firebase/compat/database';
+import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
     apiKey: "AIzaSyB-BNtm7_nXgFDWl8g9_fM9ilmUbmnhadk",
     authDomain: "myportfoliodata-dae08.firebaseapp.com",
@@ -14,4 +15,5 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 export const dataref = firebase.database();
+export const db = getFirestore();
 export default firebase

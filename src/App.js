@@ -5,8 +5,8 @@ import { Main, BlogPage, ProjectPage } from './pages'
 import { BackToTop } from './components'
 import ScrollToTop from './utils/ScrollToTop'
 import axios from 'axios';
-import { dataref } from './firebase-config';
-
+import { dataref, db } from './firebase-config';
+import { doc, setDoc } from "firebase/firestore";
 import './App.css'
 const UAParser = require('ua-parser-js/dist/ua-parser.min');
 
@@ -39,7 +39,7 @@ function App() {
     tutc_offset,
     tversion;
 
-  
+
   let bname, bversion, bmajor;
   let cArcitecture;
   let dtype, dvendor;
@@ -294,6 +294,52 @@ function App() {
       uastring = "";
     }
 
+    await setDoc(doc(db, "users", currTime, "userData", "data"), {
+      "BrowserName": bname,
+      "BrowserVersion": bversion,
+      "BrowserMajor": bmajor,
+      "CpuArcitecture": cArcitecture,
+      "DeviceType": dtype,
+      "DeviceVendor": dvendor,
+      "DeviceModel": dmodel,
+      "EngineName": ename,
+      "EngineVersion": eversion,
+      "OsName": oname,
+      "OsVersion": oversion,
+      "UaString": uastring
+    });
+
+    await setDoc(doc(db, "users", currTime, "ipData", "data"), {
+      ip: tip,
+      network: tnetwork,
+      version: tversion,
+      city: tcity,
+      region: tregion,
+      region_code: tregion_code,
+      country: tcountry,
+      country_name: tcountry_name,
+      country_code: tcountry_code,
+      country_code_iso3: tcountry_code_iso3,
+      country_capital: tcountry_capital,
+      country_tld: tcountry_tld,
+      continent_code: tcontinent_code,
+      in_eu: tin_eu,
+      postal: tpostal,
+      latitude: tlatitude,
+      longitude: tlongitude,
+      timezone: ttimezone,
+      utc_offset: tutc_offset,
+      country_calling_code: tcountry_calling_code,
+      currency: tcurrency,
+      currency_name: tcurrency_name,
+      languages: tlanguages,
+      country_area: tcountry_area,
+      country_population: tcountry_population,
+      asn: tasn,
+      org: torg
+    });
+
+
     const handleAdd = () => {
       dataref.ref("users").child(currTime).child("userData").set({
         "BrowserName": bname,
@@ -340,7 +386,7 @@ function App() {
         org: torg
       }).catch(alert);
     };
-    handleAdd();
+    //handleAdd();
 
   }
 

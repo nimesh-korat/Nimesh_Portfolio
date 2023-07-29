@@ -2,7 +2,8 @@ import React, { useContext, useState } from 'react';
 import { Snackbar, IconButton, SnackbarContent } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles } from '@material-ui/core/styles';
-import { dataref } from '../../firebase-config';
+import { dataref, db } from '../../firebase-config';
+import { doc, setDoc } from "firebase/firestore";
 import isEmail from 'validator/lib/isEmail';
 import {
     FaInstagram,
@@ -128,18 +129,23 @@ function Contacts() {
 
     const classes = useStyles();
 
-    const handleContactForm = (e) => {
+    const handleContactForm = async (e) => {
         e.preventDefault();
 
         if (name && email && message) {
             if (isEmail(email)) {
 
-                dataref.ref("forms").child(currTime).set({
+                // dataref.ref("forms").child(currTime).set({
+                //     name: name,
+                //     email: email,
+                //     message: message
+                // }).catch(alert);
+                await setDoc(doc(db, "formData", currTime), {
                     name: name,
                     email: email,
                     message: message
-                }).catch(alert);
-                setSuccess(true);
+                  });
+                  setSuccess(true);
 
                 // const responseData = {
                 //     name: name,
