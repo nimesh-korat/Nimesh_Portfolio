@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react';
 import { Snackbar, IconButton, SnackbarContent } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles } from '@material-ui/core/styles';
+import { dataref } from '../../firebase-config';
+import isEmail from 'validator/lib/isEmail';
 import {
     FaInstagram,
     FaTwitter,
@@ -21,14 +23,18 @@ import { contactsData } from '../../data/contactsData';
 import './Contacts.css';
 
 function Contacts() {
+
+    let date = new Date();
+    let currTime = date.getFullYear() + "" + date.getMonth() + "" + date.getDate() + "" + date.getHours() + "" + date.getMinutes() + "" + date.getSeconds();
+
     const [open, setOpen] = useState(false);
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
-    const [success] = useState(false);
-    const [errMsg] = useState('');
+    const [success, setSuccess] = useState(false);
+    const [errMsg, setErrMsg] = useState('');
 
     const { theme } = useContext(ThemeContext);
 
@@ -123,34 +129,42 @@ function Contacts() {
     const classes = useStyles();
 
     const handleContactForm = (e) => {
-        // e.preventDefault();
+        e.preventDefault();
 
-        // if (name && email && message) {
-        //     if (isEmail(email)) {
-        //         const responseData = {
-        //             name: name,
-        //             email: email,
-        //             message: message,
-        //         };
+        if (name && email && message) {
+            if (isEmail(email)) {
 
-        //         axios.post(contactsData.sheetAPI, responseData).then((res) => {
-        //             console.log('success');
-        //             setSuccess(true);
-        //             setErrMsg('');
+                dataref.ref("forms").child(currTime).set({
+                    name: name,
+                    email: email,
+                    message: message
+                }).catch(alert);
+                setSuccess(true);
 
-        //             setName('');
-        //             setEmail('');
-        //             setMessage('');
-        //             setOpen(false);
-        //         });
-        //     } else {
-        //         setErrMsg('Invalid email');
-        //         setOpen(true);
-        //     }
-        // } else {
-        //     setErrMsg('Enter all the fields');
-        //     setOpen(true);
-        // }
+                // const responseData = {
+                //     name: name,
+                //     email: email,
+                //     message: message,
+                // };
+
+                // axios.post(contactsData.sheetAPI, responseData).then((res) => {
+                //     console.log('success');
+                //     setSuccess(true);
+                //     setErrMsg('');
+
+                //     setName('');
+                //     setEmail('');
+                //     setMessage('');
+                //     setOpen(false);
+                // });
+            } else {
+                setErrMsg('Invalid email');
+                setOpen(true);
+            }
+        } else {
+            setErrMsg('Enter all the fields');
+            setOpen(true);
+        }
     };
 
     return (
