@@ -49,8 +49,21 @@ function App() {
   let dmodel;
 
 
-  let date = new Date();
-  let currTime = date.getFullYear() + "" + date.getMonth() + "" + date.getDate() + "" + date.getHours() + "" + date.getMinutes() + "" + date.getSeconds();
+  let d = new Date();
+
+  let day = d.getDate();
+  let month = d.getMonth() + 1;
+  let year = d.getFullYear();
+  let hour = d.getHours();
+  let minute = d.getMinutes();
+  let second = d.getSeconds();
+  if (month.toString().length < 2) month = '0' + month;
+  if (hour.toString().length < 2) hour = '0' + hour;
+  if (minute.toString().length < 2) minute = '0' + minute;
+  if (second.toString().length < 2) second = '0' + second;
+
+
+  let currTime = year + "" + month + "" + day + "" + hour + "" + minute + "" + second;
 
   let ClientUAInstance = new UAParser();
 
