@@ -2,14 +2,14 @@ import firebase from "firebase/compat/app";
 import 'firebase/compat/database';
 import { getFirestore } from "firebase/firestore";
 
-const apkey = process.env.REACT_APP_API_KEY;
-const audo = process.env.REACT_APP_AUTHDOMAIN;
-const daur = process.env.REACT_APP_DATABASEURL;
-const prid = process.env.REACT_APP_PROJECTID;
-const stbu = process.env.REACT_APP_STORAGEBUCKET;
-const meseid = process.env.REACT_APP_MESSAGINGSENDERID;
-const apid = process.env.REACT_APP_APPID;
-const meid = process.env.REACT_APP_MEASUREMENTID;
+const apkey = process.env.REACT_APP_JBIAWB;
+const audo = process.env.REACT_APP_ANJHBGXN;
+const daur = process.env.REACT_APP_UJIDNSL;
+const prid = process.env.REACT_APP_PBBUBX;
+const stbu = process.env.REACT_APP_IUXAGTT;
+const meseid = process.env.REACT_APP_HKGHSDD;
+const apid = process.env.REACT_APP_HGXFADSD;
+const meid = process.env.REACT_APP_IHCSFCJX;
 
 const firebaseConfig = {
     apiKey: apkey,
