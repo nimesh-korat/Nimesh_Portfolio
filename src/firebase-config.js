@@ -1,15 +1,25 @@
 import firebase from "firebase/compat/app";
 import 'firebase/compat/database';
 import { getFirestore } from "firebase/firestore";
+
+const apkey = process.env.REACT_APP_API_KEY;
+const audo = process.env.REACT_APP_AUTHDOMAIN;
+const daur = process.env.REACT_APP_DATABASEURL;
+const prid = process.env.REACT_APP_PROJECTID;
+const stbu = process.env.REACT_APP_STORAGEBUCKET;
+const meseid = process.env.REACT_APP_MESSAGINGSENDERID;
+const apid = process.env.REACT_APP_APPID;
+const meid = process.env.REACT_APP_MEASUREMENTID;
+
 const firebaseConfig = {
-    apiKey: "AIzaSyB-BNtm7_nXgFDWl8g9_fM9ilmUbmnhadk",
-    authDomain: "myportfoliodata-dae08.firebaseapp.com",
-    databaseURL: "https://myportfoliodata-dae08-default-rtdb.firebaseio.com",
-    projectId: "myportfoliodata-dae08",
-    storageBucket: "myportfoliodata-dae08.appspot.com",
-    messagingSenderId: "101778662616",
-    appId: "1:101778662616:web:c5c465b0507538894923ad",
-    measurementId: "G-QJ0123WHNF"
+    apiKey: apkey,
+    authDomain: audo,
+    databaseURL: daur,
+    projectId: prid,
+    storageBucket: stbu,
+    messagingSenderId: meseid,
+    appId: apid,
+    measurementId: meid
 };
 
 // Initialize Firebase
