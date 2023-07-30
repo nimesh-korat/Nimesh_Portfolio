@@ -16,7 +16,7 @@ export const educationData = [
     {
         id: 3,
         institution: 'Gandhinagar Institute of Technology, Gandhinagar',
-        course: 'Bechlour of Engineering',
+        course: 'Bachelor of Engineering',
         startYear: '2021',
         endYear: 'Prsent'
     },
