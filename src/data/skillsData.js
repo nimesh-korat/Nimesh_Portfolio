@@ -1,6 +1,8 @@
 export const skillsData = [
     'Flutter',
     'Dart',
+    'React',
+    'javascript',
     'Java',
     'HTML',
     'CSS',
