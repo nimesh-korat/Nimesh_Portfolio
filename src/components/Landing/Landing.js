@@ -151,7 +151,7 @@ function Landing() {
                         {/* <h6>{headerData.title}</h6> */}
                         <h6 style={{ color: theme.primary }}>
                             <Typed style={{ textShadow: `0px 0px 10px ${theme.primary}` }}
-                                strings={["I'm a Flutter Developer", "I'm a Android Developer", "I'm your Friend ;)"]}
+                                strings={["I'm a Flutter Developer", "I'm a React Developer", "I'm a Android Developer", "I'm your Friend ;)"]}
                                 typeSpeed={30}
                                 backSpeed={30}
                                 smartBackspace
