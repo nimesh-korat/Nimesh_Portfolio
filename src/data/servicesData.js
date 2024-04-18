@@ -53,11 +53,11 @@ export const servicesData = [
     //     title: 'Video Editing',
     //     icon: <FaVideo />
     // },
-    // {
-    //     id: 10,
-    //     title: 'Data Entry', 
-    //     icon: <BsClipboardData />
-    // },
+    {
+        id: 10,
+        title: 'Data Entry', 
+        icon: <BsClipboardData />
+    },
     // {
     //     id: 11,
     //     title: 'Ebook Writing',
@@ -68,11 +68,11 @@ export const servicesData = [
     //     title: 'Audio Transcription',
     //     icon: <AiFillAudio />
     // },
-    // {
-    //     id: 13,
-    //     title: 'Blog Posting',
-    //     icon: <FaRegNewspaper />
-    // },
+    {
+        id: 13,
+        title: 'Blog Posting',
+        icon: <FaRegNewspaper />
+    },
 
 ]
 
