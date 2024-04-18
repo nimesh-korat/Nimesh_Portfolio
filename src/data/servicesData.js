@@ -2,9 +2,9 @@
 import { BiShoppingBag, BiPencil } from "react-icons/bi";
 import { BsCodeSlash, BsClipboardData } from "react-icons/bs";
 import { AiOutlineMail, AiFillAudio } from "react-icons/ai";
-import { FaInternetExplorer,  FaChalkboardTeacher, FaCameraRetro, FaPinterest, FaVideo, FaTabletAlt, FaRegNewspaper } from "react-icons/fa";
+import { FaInternetExplorer, FaChalkboardTeacher, FaCameraRetro, FaPinterest, FaVideo, FaTabletAlt, FaRegNewspaper } from "react-icons/fa";
 
- 
+
 
 export const servicesData = [
     // {
@@ -48,11 +48,11 @@ export const servicesData = [
     //     title: 'Pinterest Virtual Assistant',
     //     icon: <FaPinterest />
     // }, 
-    {
-        id: 9,
-        title: 'Video Editing',
-        icon: <FaVideo />
-    },
+    // {
+    //     id: 9,
+    //     title: 'Video Editing',
+    //     icon: <FaVideo />
+    // },
     // {
     //     id: 10,
     //     title: 'Data Entry', 
